@@ -1,0 +1,40 @@
+services:
+  haproxy:
+    image: haproxy:2.9-dev7-alpine
+    container_name: haproxy-lb-dev
+    volumes:
+      - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    ports:
+      - 
+      - 
+    depends_on:
+      - 
+      - 
+      - 
+
+  dev1:
+    image: nginx
+    container_name: dev1-test
+    volumes:
+      - 
+      - 
+    ports:
+      - 
+
+  dev2:
+    image: nginx
+    container_name: dev2-test
+    volumes:
+      - 
+      - 
+    ports:
+      - 
+
+  dev3:
+    image: nginx
+    container_name: dev3-test
+    volumes:
+      - 
+      - 
+    ports:
+      - 
